@@ -1,4 +1,4 @@
-package com.test.test;
+package com.test.test.elastic;
 
 /**
  * Created by zhengying on 15/11/23.

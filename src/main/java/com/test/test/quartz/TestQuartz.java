@@ -1,4 +1,4 @@
-package com.test.test;
+package com.test.test.quartz;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

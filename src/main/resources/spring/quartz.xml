@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
     <!-- quartz配置 -->
-    <bean id="taskJob" class="com.test.test.TestQuartz"/>
+    <bean id="taskJob" class="com.test.test.quartz.TestQuartz"/>
     <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
         <property name="group" value="job_work"/>
         <property name="name" value="job_work_name"/>

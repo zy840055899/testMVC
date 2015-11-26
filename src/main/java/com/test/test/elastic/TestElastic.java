@@ -1,4 +1,4 @@
-package com.test.test;
+package com.test.test.elastic;
 
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
