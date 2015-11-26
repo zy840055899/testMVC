@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -28,34 +27,3 @@
     </bean>
 
 </beans>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="
-            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
-
-    <util:properties id="jdbc" location="classpath:config/database.properties"/>
-    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="#{jdbc.driver}"/>
-        <property name="url" value="#{jdbc.url}"/>
-        <property name="username" value="#{jdbc.user}"/>
-        <property name="password" value="#{jdbc.pwd}"/>
-        <property name="maxActive" value="#{jdbc.maxPoolSize}"/>
-        <property name="minIdle" value="#{jdbc.minPoolSize}"/>
-    </bean>
-
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="myDataSource"/>
-        <property name="mapperLocations" value="classpath:sql/*/*.xml"/>
-    </bean>
-
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.test.dao"/>
-        <property name="annotationClass" value="com.test.annotation.MyRepository"/>
-    </bean>
-
-</beans>
->>>>>>> 7ee670bf0cc1ac59660a062b013096b7a46d629f
