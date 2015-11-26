@@ -20,14 +20,14 @@ import java.util.List;
 @RequestMapping("test")
 public class TestController {
 
-    @Resource
-    private TestDao testDao;
-
-    @RequestMapping("testSql.do")
-    @ResponseBody
-    public List testSql() {
-        return testDao.testSql();
-    }
+//    @Resource
+//    private TestDao testDao;
+//
+//    @RequestMapping("testSql.do")
+//    @ResponseBody
+//    public List testSql() {
+//        return testDao.testSql();
+//    }
 
     @RequestMapping("toIndex.do")
     public String toLogin() {
