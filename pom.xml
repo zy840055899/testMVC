@@ -204,7 +204,7 @@
             <version>2.2.1</version>
         </dependency>
 
-        <!-- elasticsearch hehe -->
+        <!-- elasticsearch -->
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
