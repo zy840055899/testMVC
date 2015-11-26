@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.test.dao.TestDao">
+    <select id="testSql" resultType="com.test.entity.Test">
+        SELECT * FROM test
+    </select>
+</mapper>
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.test.dao.TestDao">
+    <select id="testSql" resultType="com.test.entity.Test">
+        SELECT * FROM test
+    </select>
+</mapper>
+>>>>>>> 7ee670bf0cc1ac59660a062b013096b7a46d629f
