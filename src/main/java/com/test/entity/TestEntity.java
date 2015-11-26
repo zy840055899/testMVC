@@ -3,7 +3,7 @@ package com.test.entity;
 /**
  * Created by zhengying on 15/9/30.
  */
-public class Test {
+public class TestEntity {
     private String id;
     private String name;
     private int age;
