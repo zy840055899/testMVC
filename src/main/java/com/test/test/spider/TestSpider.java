@@ -35,7 +35,7 @@ public class TestSpider {
             // 通过对URL的得到文件名
             String filename = path.substring(path.lastIndexOf('/') + 1) + ".html";
             // 获得文件输出流
-            output = new FileOutputStream(filename);
+            output = new FileOutputStream("/Users/zhengying/downloads/baidu/" + filename);
             // 输出到文件
             int tempByte = -1;
             while ((tempByte = input.read()) > 0) {
