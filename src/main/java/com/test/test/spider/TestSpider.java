@@ -33,8 +33,7 @@ public class TestSpider {
         if (statusCode == HttpStatus.SC_OK) {
             input = getMethod.getResponseBodyAsStream();
             // 通过对URL的得到文件名
-            String filename = path.substring(path.lastIndexOf('/') + 1)
-                    + ".html";
+            String filename = path.substring(path.lastIndexOf('/') + 1) + ".html";
             // 获得文件输出流
             output = new FileOutputStream(filename);
             // 输出到文件
