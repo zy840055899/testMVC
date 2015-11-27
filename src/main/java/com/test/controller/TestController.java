@@ -29,34 +29,5 @@ public class TestController {
 //        return testDao.testSql();
 //    }
 
-    @RequestMapping("toIndex.do")
-    public String toLogin() {
-        return "test/upload";
-    }
 
-
-    @RequestMapping("uploadimg.do")
-    @ResponseBody
-    public String uploadimg(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request, ModelMap model) {
-
-        System.out.println("开始...........");
-//        String path = request.getSession().getServletContext().getRealPath("upload");
-        String path = "/Users/zhengying/downloads";
-        String fileName = file.getOriginalFilename();
-//        String fileName = new Date().getTime()+".jpg";
-        System.out.println(path);
-        File targetFile = new File(path, fileName);
-        if (!targetFile.exists()) {
-            targetFile.mkdirs();
-        }
-
-        //保存
-        try {
-            file.transferTo(targetFile);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return "success:" + request.getContextPath() + "/upload/" + fileName;
-    }
 }
