@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * Created by zhengying on 15/11/23.
+ * 客户端:灌数据
  */
 public class ESClient {
     private Client client;

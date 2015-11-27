@@ -211,5 +211,19 @@
             <version>1.7.3</version>
         </dependency>
 
+        <!-- 不加的话junit测试通不过 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.2.0.Final</version>
+        </dependency>
+
+        <!-- apache HttpClient -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+
     </dependencies>
 </project>

@@ -11,6 +11,7 @@ import org.elasticsearch.search.SearchHits;
 
 /**
  * Created by zhengying on 15/11/23.
+ * 查数据.
  */
 public class TestElastic {
     public static void main(String[] args) {
