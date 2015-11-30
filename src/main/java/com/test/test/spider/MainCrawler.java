@@ -18,10 +18,7 @@ public class MainCrawler {
     public void crawling(String[] seeds) {
         LinkFilter filter = new LinkFilter() {
             public boolean accept(String url) {
-                if (url.startsWith("http://www.baidu.com")) {
-                    return true;
-                }
-                return false;
+                return url.startsWith("http://www.baidu.com");
             }
         };
 

@@ -22,10 +22,7 @@ public class HtmlParserTool {
 
             NodeFilter frameFilter = new NodeFilter() {
                 public boolean accept(Node node) {
-                    if (node.getText().startsWith("frame src=")) {
-                        return true;
-                    }
-                    return false;
+                    return node.getText().startsWith("frame src=");
                 }
             };
 
