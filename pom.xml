@@ -218,7 +218,7 @@
             <version>4.2.0.Final</version>
         </dependency>
 
-        <!-- apache HttpClient -->
+        <!-- apache HttpClient 和 网络爬虫用到的html工具jar-->
         <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
@@ -231,7 +231,23 @@
             <version>2.1</version>
         </dependency>
 
+        <!-- dubbo的使用 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.3</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.3.6</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.3</version>
+        </dependency>
     </dependencies>
 </project>
