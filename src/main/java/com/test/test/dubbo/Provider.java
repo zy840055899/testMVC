@@ -8,13 +8,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Provider {
     public static void main(String[] args) throws Exception {
 
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/dubbo.xml");
+        ClassPathXmlApplicationContext ctx
+                = new ClassPathXmlApplicationContext("spring/dubbo.xml");
 
         ctx.start();
 
         System.out.println("xxxxxx");
 
         System.in.read(); // 按任意键退出
+
     }
 
 }
