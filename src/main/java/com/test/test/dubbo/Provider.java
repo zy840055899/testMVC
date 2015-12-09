@@ -15,7 +15,7 @@ public class Provider {
 
         System.out.println("xxxxxx");
 
-        System.in.read(); // 按任意键退出
+        System.in.read(); // 按任意键退出(为保证服务一直开着，利用输入流的阻塞来模拟)
 
     }
 
