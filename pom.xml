@@ -231,7 +231,7 @@
             <version>2.1</version>
         </dependency>
 
-        <!-- dubbo的使用(3个包),dubbo版本太老,导致工程运行出错,jar包冲突 -->
+        <!-- dubbo的使用,dubbo版本太老,导致工程运行出错,jar包冲突 -->
         <!--<dependency>-->
             <!--<groupId>com.alibaba</groupId>-->
             <!--<artifactId>dubbo</artifactId>-->
@@ -257,6 +257,17 @@
             <version>18.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.13</version>
+        </dependency>
 
     </dependencies>
 </project>
