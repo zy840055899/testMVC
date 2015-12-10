@@ -4,15 +4,15 @@ package com.test.entity;
  * Created by zhengying on 15/9/30.
  */
 public class Student {
-    private String id;
+    private int id;
     private String name;
     private int age;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

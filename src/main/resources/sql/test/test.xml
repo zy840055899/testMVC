@@ -18,6 +18,13 @@
         OR student.update_time>student.static_time
     </select>
 
+    <update id="updateStaticTime" parameterType="int">
+        UPDATE student
+        SET static_time=sysdate()
+        WHERE id=#{id}
+    </update>
+
+
 </mapper>
 
 

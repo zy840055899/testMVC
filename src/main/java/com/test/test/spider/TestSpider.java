@@ -20,10 +20,10 @@ public class TestSpider {
      * @return 返回布尔值，表示是否正常下载目标页面
      * @throws Exception 读取网页流或写入本地文件流的IO异常
      */
-    public static boolean downloadPage(String path) throws Exception {
+    public static boolean downloadPage(String path, String fileName) throws Exception {
         // 定义输入输出流
-        InputStream input = null;
-        OutputStream output = null;
+        InputStream input;
+        OutputStream output;
         // 得到 post 方法
         GetMethod getMethod = new GetMethod(path);
         // 执行，返回状态码
@@ -32,10 +32,8 @@ public class TestSpider {
         // 简单起见，只处理返回值为 200 的状态码
         if (statusCode == HttpStatus.SC_OK) {
             input = getMethod.getResponseBodyAsStream();
-            // 通过对URL的得到文件名
-            String filename = path.substring(path.lastIndexOf('/') + 1) + ".html";
             // 获得文件输出流
-            output = new FileOutputStream("/Users/zhengying/downloads/baidu/" + filename);
+            output = new FileOutputStream("/Users/zhengying/downloads/htmls/" + fileName);
             // 输出到文件
             int tempByte = -1;
             while ((tempByte = input.read()) > 0) {
@@ -57,7 +55,9 @@ public class TestSpider {
     public static void main(String[] args) {
         try {
             // 抓取百度首页，输出
-            TestSpider.downloadPage("http://www.baidu.com");
+            String path = "http://www.baidu.com";
+            String filename = path.substring(path.lastIndexOf('/') + 1) + ".html";
+            TestSpider.downloadPage(path, filename);
         } catch (Exception e) {
             e.printStackTrace();
         }
