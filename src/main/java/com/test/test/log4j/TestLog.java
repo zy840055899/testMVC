@@ -22,7 +22,6 @@ public class TestLog {
         logger.debug("[debug message]");
         // 记录trace信息
         logger.trace("[trace message]");
-        logger.debug("asdasda");
     }
 
 }
