@@ -3,7 +3,21 @@
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 
 <mapper namespace="com.test.dao.TestDao">
-    <select id="testSql" resultType="com.test.entity.TestEntity">
-        SELECT * FROM test
+
+    <select id="testSql" resultType="com.test.entity.Student">
+        SELECT * FROM student
     </select>
+
+    <select id="getStuById" parameterType="int" resultType="com.test.entity.Student">
+        SELECT * FROM student WHERE id=#{id}
+    </select>
+
+    <select id="getNeedStaticStus" resultType="com.test.entity.Student">
+        SELECT * FROM student
+        WHERE static_time IS NULL
+        OR student.update_time>student.static_time
+    </select>
+
 </mapper>
+
+

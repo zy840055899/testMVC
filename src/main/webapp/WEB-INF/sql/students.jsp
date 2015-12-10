@@ -19,10 +19,10 @@
         <td>name</td>
         <td>age</td>
     </tr>
-    <c:forEach items="${testers}" var="t">
+    <c:forEach items="${students}" var="t">
     <tr>
         <%--<td><a href="detail.do?id=${t.id}" target="_blank">${t.id}</a></td>--%>
-        <td><a href="localhost:7002/detail/${t.id}.html" target="_blank">${t.id}</a></td>
+        <td><a href="http://localhost:7002/detail/${t.id}.html" target="_blank">${t.id}</a></td>
         <td>${t.name}</td>
         <td>${t.age}</td>
     </tr>

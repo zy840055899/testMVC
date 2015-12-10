@@ -12,14 +12,11 @@ import java.util.Date;
  */
 @Component
 public class TestQuartz {
-
     private static final Logger LOG = LoggerFactory.getLogger(TestQuartz.class);
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    String str = "";
     public void run() {
-        str = sdf.format(new Date());
-        System.out.println(str);
-        LOG.info("数据转换任务线程开始执行");
-    }
+        // 查询所有updateTime晚于staticTime或staticTime为空的学生信息
 
+
+
+    }
 }

@@ -3,7 +3,7 @@ package com.test.entity;
 /**
  * Created by zhengying on 15/9/30.
  */
-public class TestEntity {
+public class Student {
     private String id;
     private String name;
     private int age;
@@ -30,5 +30,14 @@ public class TestEntity {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

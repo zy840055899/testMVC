@@ -1,7 +1,7 @@
 package com.test.controller;
 
 import com.test.dao.TestDao;
-import com.test.entity.TestEntity;
+import com.test.entity.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,16 +28,15 @@ public class TestController {
 
     @RequestMapping("testSqlJsp.do")
     public String testSqlJsp(Model model) {
-        List<TestEntity> testers = testDao.testSql();
-        model.addAttribute("testers", testers);
-        return "sql/testers";
+        List<Student> students = testDao.testSql();
+        model.addAttribute("students", students);
+        return "sql/students";
     }
 
     @RequestMapping("detail.do")
     public String detail(Model model, int id) {
-        model.addAttribute("id", id);
+        Student stu = testDao.getStuById(id);
+        model.addAttribute("stu", stu);
         return "sql/detail";
     }
-
-
 }

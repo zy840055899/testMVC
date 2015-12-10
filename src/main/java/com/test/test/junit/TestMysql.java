@@ -2,7 +2,7 @@ package com.test.test.junit;
 
 import com.google.gson.Gson;
 import com.test.dao.TestDao;
-import com.test.entity.TestEntity;
+import com.test.entity.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,11 +20,12 @@ public class TestMysql {
 
         TestDao dao = ctx.getBean("testDao", TestDao.class);
 
-        List<TestEntity> objs = dao.testSql();
 
-        Gson gson = new Gson();
+        Student stu = dao.getStuById(100110);
 
-        System.out.println(gson.toJson(objs));
+        System.out.println(stu);
+
+
     }
 
 }

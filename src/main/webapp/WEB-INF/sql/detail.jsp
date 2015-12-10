@@ -12,6 +12,6 @@
     <title>Title</title>
 </head>
 <body>
-    ${id}
+    ${stu.id}, ${stu.name}, ${stu.age}
 </body>
 </html>
