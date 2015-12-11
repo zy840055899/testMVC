@@ -13,7 +13,6 @@ public class TestLog {
     static Logger logger = LoggerFactory.getLogger(TestLog.class);
 
     public static void main(String[] args) throws IOException {
-
         // 记录error信息
         logger.error("[info message]");
         // 记录info，还可以传入参数
