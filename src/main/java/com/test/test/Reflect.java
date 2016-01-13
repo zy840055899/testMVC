@@ -17,8 +17,6 @@ public class Reflect {
      * @throws NoSuchMethodException
      */
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SecurityException, NoSuchFieldException, NoSuchMethodException {
-        // TODO Auto-generated method stub
-
         //Demo1.  通过Java反射机制得到类的包名和类名
         Demo1();
         System.out.println("===============================================");
@@ -50,7 +48,6 @@ public class Reflect {
         //Demo8: 通过Java反射机制获得类加载器
         Demo8();
         System.out.println("===============================================");
-
     }
 
     /**
@@ -127,7 +124,6 @@ public class Reflect {
         System.out.println("Demo4: " + person1.getName() + " : " + person1.getAge()
                 + "  ,   " + person2.getName() + " : " + person2.getAge()
         );
-
     }
 
     /**
@@ -149,9 +145,7 @@ public class Reflect {
         personNameField.setAccessible(true);
         personNameField.set(obj, "胖虎先森");
 
-
         System.out.println("Demo5: 修改属性之后得到属性变量的值：" + personNameField.get(obj));
-
     }
 
 
@@ -170,13 +164,11 @@ public class Reflect {
 
         System.out.println("===============================================");
 
-
         Field[] fields = class1.getDeclaredFields();
         for (int i = 0; i < fields.length; i++) {
             System.out.println("类中的成员: " + fields[i]);
         }
         System.out.println("===============================================");
-
 
         //取得类方法
         Method[] methods = class1.getDeclaredMethods();
@@ -195,7 +187,6 @@ public class Reflect {
         for (int i = 0; i < interfaces.length; i++) {
             System.out.println("实现的接口类名: " + interfaces[i].getName());
         }
-
     }
 
     /**
@@ -294,12 +285,13 @@ class SuperMan extends Person implements ActionInterface {
         BlueBriefs = blueBriefs;
     }
 
+    @Override
     public void walk(int m) {
-        // TODO Auto-generated method stub
         System.out.println("超人会走耶～～走了" + m + "米就走不动了！");
     }
 }
 
 interface ActionInterface {
-    public void walk(int m);
+    void walk(int m);
 }
+
