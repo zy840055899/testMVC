@@ -14,13 +14,13 @@ public class TestLog {
 
     public static void main(String[] args) throws IOException {
         // 记录error信息
-        logger.error("[info message]");
-        // 记录info，还可以传入参数
-        logger.info("[info message]{},{},{},{}", "abc", false, 123, new TestLog());
-        // 记录deubg信息
-        logger.debug("[debug message]");
-        // 记录trace信息
-        logger.trace("[trace message]");
+        logger.error("88888888888888");
+//        // 记录info，还可以传入参数
+//        logger.info("[info message]{},{},{}", "abc", "aaaaaaaa", 123);
+//        // 记录deubg信息
+//        logger.debug("[debug message]");
+//        // 记录trace信息
+//        logger.trace("[trace message]");
     }
 
 }
