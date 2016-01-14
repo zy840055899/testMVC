@@ -8,7 +8,7 @@ import org.apache.commons.mail.SimpleEmail;
 import java.net.URL;
 
 /**
- * apache commons发送邮件例子
+ * apache commons发送邮件例子(网页格式的邮件)
  */
 public class MailTest3 {
     public static void main(String[] args) throws Exception {
