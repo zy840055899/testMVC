@@ -14,7 +14,7 @@ public class MailTest {
             Email email = new SimpleEmail();
             email.setHostName("smtp.163.com");
             email.setSmtpPort(465);
-            email.setAuthenticator(new DefaultAuthenticator("zy840055899@163.com", "password"));
+            email.setAuthenticator(new DefaultAuthenticator("zy840055899@163.com", "pwd"));
             email.setSSLOnConnect(true);
             email.setFrom("zy840055899@163.com");
             email.setSubject("TestMail");
@@ -24,6 +24,5 @@ public class MailTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
