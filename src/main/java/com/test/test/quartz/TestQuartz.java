@@ -23,7 +23,7 @@ public class TestQuartz {
     public void run() {
         // 查询所有updateTime晚于staticTime或staticTime为空的学生信息
         List<Student> stus = dao.getNeedStaticStus();
-        String detailPath = "http://127.0.0.1:7001/test/detail.do?id=";
+        String detailPath = "http://127.0.0.1:7001/refactor/detail.do?id=";
         for (int i = 0; i < stus.size(); i++) {
             int id = stus.get(i).getId();
             try {

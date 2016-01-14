@@ -1,4 +1,4 @@
-package com.test.test;
+package com.test.test.refactor;
 
 import java.lang.reflect.*;
 
@@ -70,7 +70,7 @@ public class Reflect {
         Class<?> class2 = null;
 
         //写法1, 可能抛出 ClassNotFoundException [多用这个写法]
-        class1 = Class.forName("com.test.test.Person");
+        class1 = Class.forName("com.test.test.refactor.Person");
         System.out.println("Demo2:(写法1) 包名: " + class1.getPackage().getName() + "，"
                 + "完整类名: " + class1.getName());
 
@@ -89,7 +89,7 @@ public class Reflect {
      */
     public static void Demo3() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.test.test.Person");
+        class1 = Class.forName("com.test.test.refactor.Person");
         //由于这里不能带参数，所以你要实例化的这个类Person，一定要有无参构造函数哈～
         Person person = (Person) class1.newInstance();
         person.setAge(20);
@@ -111,7 +111,7 @@ public class Reflect {
         Person person1 = null;
         Person person2 = null;
 
-        class1 = Class.forName("com.test.test.Person");
+        class1 = Class.forName("com.test.test.refactor.Person");
         //得到一系列构造函数集合
         Constructor<?>[] constructors = class1.getConstructors();
 
@@ -138,7 +138,7 @@ public class Reflect {
      */
     public static void Demo5() throws IllegalArgumentException, IllegalAccessException, SecurityException, NoSuchFieldException, InstantiationException, ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.test.test.Person");
+        class1 = Class.forName("com.test.test.refactor.Person");
         Object obj = class1.newInstance();
 
         Field personNameField = class1.getDeclaredField("name");
@@ -156,7 +156,7 @@ public class Reflect {
      */
     public static void Demo6() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.test.test.SuperMan");
+        class1 = Class.forName("com.test.test.refactor.SuperMan");
 
         //取得父类名称
         Class<?> superClass = class1.getSuperclass();
@@ -202,7 +202,7 @@ public class Reflect {
      */
     public static void Demo7() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.test.test.SuperMan");
+        class1 = Class.forName("com.test.test.refactor.SuperMan");
 
         System.out.println("Demo7: \n调用无参方法fly()：");
         Method method = class1.getMethod("fly");
@@ -228,7 +228,7 @@ public class Reflect {
      */
     public static void Demo8() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("com.test.test.SuperMan");
+        class1 = Class.forName("com.test.test.refactor.SuperMan");
         String nameString = class1.getClassLoader().getClass().getName();
 
         System.out.println("Demo8: 类加载器类名: " + nameString);
@@ -270,7 +270,7 @@ class Person {
     }
 }
 
-class SuperMan extends Person implements ActionInterface {
+class SuperMan implements ActionInterface {
     private boolean BlueBriefs;
 
     public void fly() {

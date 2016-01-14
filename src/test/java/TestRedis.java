@@ -16,7 +16,7 @@ public class TestRedis {
         System.out.println(jedis.ping());
 
         // jedis string
-        System.out.println(jedis.get("test"));
+        System.out.println(jedis.get("refactor"));
 
         // jedis list
         List list = jedis.lrange("nosqls", 0, 10);

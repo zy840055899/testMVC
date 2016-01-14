@@ -21,7 +21,7 @@ public class WebController {
 
     @RequestMapping("toIndex.do")
     public String toLogin() {
-        return "test/index";
+        return "refactor/index";
     }
 
     @RequestMapping("getToken.do")
@@ -38,7 +38,7 @@ public class WebController {
 
     @RequestMapping("toUpload.do")
     public String toUpload() {
-        return "test/upload";
+        return "refactor/upload";
     }
 
 
