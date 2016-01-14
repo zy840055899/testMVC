@@ -23,7 +23,7 @@ import javax.imageio.ImageIO;
 /**
  * 图片处理工具类：<br>
  * 功能：缩放图像、切割图像、图像类型转换、彩色转黑白、文字水印、图片水印等
- *
+ * <p/>
  * 原文:http://www.cnblogs.com/liyunqi007/archive/2011/11/23/2260052.html
  */
 public class ImageUtils {
@@ -38,6 +38,8 @@ public class ImageUtils {
     public static String IMAGE_TYPE_PNG = "png";// 可移植网络图形
     public static String IMAGE_TYPE_PSD = "psd";// Photoshop的专用格式Photoshop
 
+    public static String url = "/Users/zhengying/Desktop/gou.jpeg";
+
     /**
      * 程序入口：用于测试
      *
@@ -45,33 +47,33 @@ public class ImageUtils {
      */
     public static void main(String[] args) {
         // 1-缩放图像：
-//        // 方法一：按比例缩放/Users/zhengying/Desktop/gou.jpeg
-//        ImageUtils.scale("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_scale.jpeg", 2, true);//测试OK
-//        // 方法二：按高度和宽度缩放
-//        ImageUtils.scale2("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_scale2.jpeg", 500, 300, true);//测试OK
-//
-//        // 2-切割图像：
-//        // 方法一：按指定起点坐标和宽高切割
-//        ImageUtils.cut("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_cut.jpeg", 0, 0, 400, 400);//测试OK
-//        // 方法二：指定切片的行数和列数
-//        ImageUtils.cut2("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_cut2.jpeg", 2, 2);//测试OK
-//        // 方法三：指定切片的宽度和高度
-//        ImageUtils.cut3("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_cut3.jpeg", 300, 300);//测试OK
-//
-//        // 3-图像类型转换：
-//        ImageUtils.convert("/Users/zhengying/Desktop/gou.jpeg", "GIF", "/Users/zhengying/Desktop/gou.gif");//测试OK
+        // 方法一：按比例缩放/Users/zhengying/Desktop/gou.jpeg
+        ImageUtils.scale(url, "/Users/zhengying/Desktop/gou_scale.jpeg", 2, true);//测试OK
+        // 方法二：按高度和宽度缩放
+        ImageUtils.scale2(url, "/Users/zhengying/Desktop/gou_scale2.jpeg", 500, 300, true);//测试OK
+
+        // 2-切割图像：
+        // 方法一：按指定起点坐标和宽高切割
+        ImageUtils.cut(url, "/Users/zhengying/Desktop/gou_cut.jpeg", 0, 0, 400, 400);//测试OK
+        // 方法二：指定切片的行数和列数
+        ImageUtils.cut2(url, "/Users/zhengying/Desktop/gou_cut2.jpeg", 2, 2);//测试OK
+        // 方法三：指定切片的宽度和高度
+        ImageUtils.cut3(url, "/Users/zhengying/Desktop/gou_cut3.jpeg", 300, 300);//测试OK
+
+        // 3-图像类型转换：
+        ImageUtils.convert(url, "GIF", "/Users/zhengying/Desktop/gou.gif");//测试OK
 
         // 4-彩色转黑白：
-        ImageUtils.gray("/Users/zhengying/Desktop/gou.jpeg", "/Users/zhengying/Desktop/gou_gray.jpeg");//测试OK
+        ImageUtils.gray(url, "/Users/zhengying/Desktop/gou_gray.jpeg");//测试OK
 
-//        // 5-给图片添加文字水印：
-//        // 方法一：
-//        ImageUtils.pressText("我是水印文字", "/Users/zhengying/Desktop/gou.jpeg", "e:/abc_pressText.jpg", "宋体", Font.BOLD, Color.white, 80, 0, 0, 0.5f);//测试OK
-//        // 方法二：
-//        ImageUtils.pressText2("我也是水印文字", "/Users/zhengying/Desktop/gou.jpeg", "e:/abc_pressText2.jpg", "黑体", 36, Color.white, 80, 0, 0, 0.5f);//测试OK
-//
-//        // 6-给图片添加图片水印：
-//        ImageUtils.pressImage("e:/abc2.jpg", "/Users/zhengying/Desktop/gou.jpeg", "e:/abc_pressImage.jpg", 0, 0, 0.5f);//测试OK
+        // 5-给图片添加文字水印：
+        // 方法一：
+        ImageUtils.pressText("我是水印文字", url, "/Users/zhengying/Desktop/gou_pressText.jpeg", "宋体", Font.BOLD, Color.white, 80, 0, 0, 0.5f);//测试OK
+        // 方法二：
+        ImageUtils.pressText2("我也是水印文字", url, "/Users/zhengying/Desktop/gou_pressText2.jpeg", "黑体", 36, Color.white, 80, 0, 0, 0.5f);//测试OK
+
+        // 6-给图片添加图片水印：
+        ImageUtils.pressImage("/Users/zhengying/Desktop/press.png", url, "/Users/zhengying/Desktop/gou_pressImg.jpeg", 0, 0, 0.5f);//测试OK
     }
 
     /**
