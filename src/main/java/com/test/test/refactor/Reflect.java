@@ -285,7 +285,7 @@ class SuperMan implements ActionInterface {
         BlueBriefs = blueBriefs;
     }
 
-    @Override
+//    @Override
     public void walk(int m) {
         System.out.println("超人会走耶～～走了" + m + "米就走不动了！");
     }
