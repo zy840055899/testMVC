@@ -1,8 +1,5 @@
 package com.test.test.guava;
 
-//import com.google.common.cache.CacheBuilder;
-//import com.google.common.cache.CacheLoader;
-//import com.google.common.cache.LoadingCache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -31,4 +28,9 @@ public class TestGuava {
         System.out.println(cahceBuilder.get("xxxx"));
     }
 
+    @Test
+    public void testCollections(){
+
+
+    }
 }
