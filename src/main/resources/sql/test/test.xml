@@ -5,7 +5,7 @@
 <mapper namespace="com.test.dao.TestDao">
 
     <select id="testSql" resultType="com.test.entity.Student">
-        SELECT * FROM student
+        SELECT * FROM test_first
     </select>
 
     <select id="getStuById" parameterType="int" resultType="com.test.entity.Student">
