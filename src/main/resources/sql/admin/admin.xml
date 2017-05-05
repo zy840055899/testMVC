@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.test.dao.AdminDao">
+
+
+    <select id="getAdminByName" resultType="com.test.entity.Admin" parameterType="string">
+      SELECT admin_id "adminId",  amdin "adminName", password "password", phone "phone"
+      FROM admin
+      WHERE amdin=#{_username};
+    </select>
+
+    <insert id="registerAdmin" parameterType="com.test.entity.Admin">
+        INSERT INTO admin(amdin, password) VALUES (#{adminName}, #{password});
+    </insert>
+
+
+</mapper>
+
+

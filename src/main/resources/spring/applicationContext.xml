@@ -35,15 +35,28 @@
     </bean>
 
     <!-- 上传文件必须配置的bean -->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- 限制上传文件大小为100KB -->
-        <property name="maxUploadSize" value="10485760"></property>
-    </bean>
+    <!-- 限制上传文件大小为100KB -->
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+        <!--<property name="maxUploadSize" value="10485760"></property>-->
+    <!--</bean>-->
 
     <!-- mysql数据库配置-->
     <import resource="mysql.xml"/>
 
     <!--若需引入外部spring配置文件，如下-->
-    <import resource="quartz.xml" />
+    <!--<import resource="quartz.xml" />-->
+
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 第一个*代表Controller类的访问路径； 第二个*代表Controller方法的访问路径； 即所有的方法都要受此拦截器检查。 -->
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/index/login.do" />
+            <mvc:exclude-mapping path="/index/checkLogin.do" />
+            <mvc:exclude-mapping path="/index/register.do" />
+            <bean class="com.test.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+
+    </mvc:interceptors>
 
 </beans>
