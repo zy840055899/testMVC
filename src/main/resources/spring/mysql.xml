@@ -17,7 +17,7 @@
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSourxce" ref="myDataSource"/>
+        <property name="dataSource" ref="myDataSource"/>
         <property name="mapperLocations" value="classpath:sql/*/*.xml"/>
         <!-- mybatis分页插件配置 start -->
         <property name="plugins">
