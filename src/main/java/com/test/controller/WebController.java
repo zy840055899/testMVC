@@ -19,12 +19,12 @@ import java.util.Map;
 @RequestMapping("web")
 public class WebController {
 
-    @RequestMapping("toIndex.do")
+    @RequestMapping("toIndex")
     public String toLogin() {
         return "refactor/index";
     }
 
-    @RequestMapping("getToken.do")
+    @RequestMapping("getToken")
     @ResponseBody
     public Map getToken(String email) {
         Map map = new HashMap();
@@ -36,13 +36,13 @@ public class WebController {
         return map;
     }
 
-    @RequestMapping("toUpload.do")
+    @RequestMapping("toUpload")
     public String toUpload() {
         return "refactor/upload";
     }
 
 
-    @RequestMapping("uploadimg.do")
+    @RequestMapping("uploadimg")
     @ResponseBody
     public String uploadimg(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request, ModelMap model) {
 

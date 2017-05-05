@@ -20,20 +20,20 @@ public class TestController {
     @Resource
     private TestDao testDao;
 
-    @RequestMapping("testSql.do")
+    @RequestMapping("testSql")
     @ResponseBody
     public List testSql() {
         return testDao.testSql();
     }
 
-    @RequestMapping("testSqlJsp.do")
+    @RequestMapping("testSqlJsp")
     public String testSqlJsp(Model model) {
         List<Student> students = testDao.testSql();
         model.addAttribute("students", students);
         return "sql/students";
     }
 
-    @RequestMapping("detail.do")
+    @RequestMapping("detail")
     public String detail(Model model, int id) {
         Student stu = testDao.getStuById(id);
         model.addAttribute("stu", stu);

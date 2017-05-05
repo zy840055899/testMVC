@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@MyRepository
+//@MyRepository
 public interface StaffDao {
     List<Staff> getAllStaffInfos();
     int getSumStaffs();

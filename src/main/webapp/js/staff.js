@@ -11,7 +11,7 @@ $(function () {
 
    $("#addStaffBtn").on('click', function () {
        $.ajax({
-           url: "addStaff.do",
+           url: "addStaff",
            type: "post",
            data: $("#newStaffForm").serialize(),
            dataType: "json",
@@ -22,7 +22,7 @@ $(function () {
                }else{
                    $alertBody.html("添加成功");
                    $("#modal-95453").click();
-                   // location.href="staffsInfo.do";					//登录成功，跳转至信息首页
+                   // location.href="staffsInfo";					//登录成功，跳转至信息首页
                }
            },
            error: function () {
@@ -46,13 +46,13 @@ $(function () {
 
    $(".btn-primary").on('click', function () {
        $.ajax({
-           url: "updateStaff.do",
+           url: "updateStaff",
            type: "post",
            data: $("#updateForm").serialize(),
            dataType: "json",
            success: function (data) {
                if(0 == data){
-                   location.href = "staffsInfo.do?startPage="+$(".startPage").val();
+                   location.href = "staffsInfo?startPage="+$(".startPage").val();
                }else{
                    $alertBody.html("修改失败");
                    $("#modal-95453").click();

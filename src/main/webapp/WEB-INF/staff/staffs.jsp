@@ -116,7 +116,7 @@
                     <td>${s.salary}</td>
                     <td>${s.addr}</td>
                     <td>
-                        <a href="deleteStaff.do?id=${s.id}&startPage=${page.startPage}">del</a>
+                        <a href="deleteStaff?id=${s.id}&startPage=${page.startPage}">del</a>
                         <a href="javascript:void(0)" class="updateStaff">update</a>
                     </td>
                 </tr>
@@ -146,13 +146,13 @@
                     <li class="disabled"><a href="javascript:void(0)">&laquo;</a></li>
                 </c:when>
                 <c:otherwise>
-                    <li class=""><a href="staffsInfo.do?startPage=${page.startPage-1}">&laquo;</a></li>
+                    <li class=""><a href="staffsInfo?startPage=${page.startPage-1}">&laquo;</a></li>
                 </c:otherwise>
             </c:choose>
-            <%--<li <c:if test="${page.startPage <= 1}">class="disabled"</c:if>><a href="staffsInfo.do?startPage=${s.index-1}">&laquo;</a></li>--%>
+            <%--<li <c:if test="${page.startPage <= 1}">class="disabled"</c:if>><a href="staffsInfo?startPage=${s.index-1}">&laquo;</a></li>--%>
 
             <c:forEach begin="1" end="${page.totalPage}" varStatus="s">
-                <li <c:if test="${s.index == page.startPage}">class="active"</c:if>><a href="staffsInfo.do?startPage=${s.index}">${s.index}</a></li>
+                <li <c:if test="${s.index == page.startPage}">class="active"</c:if>><a href="staffsInfo?startPage=${s.index}">${s.index}</a></li>
             </c:forEach>
 
 
@@ -161,11 +161,11 @@
                     <li class="disabled"><a href="javascript:void(0);">&raquo;</a></li>
                 </c:when>
                 <c:otherwise>
-                    <li class=""><a href="staffsInfo.do?startPage=${page.startPage+1}">&raquo;</a></li>
+                    <li class=""><a href="staffsInfo?startPage=${page.startPage+1}">&raquo;</a></li>
                 </c:otherwise>
             </c:choose>
 
-            <%--<li <c:if test="${page.startPage >= page.totalPage}">class="disabled"</c:if>><a href="staffsInfo.do?startPage=${s.index+1}">&raquo;</a></li>--%>
+            <%--<li <c:if test="${page.startPage >= page.totalPage}">class="disabled"</c:if>><a href="staffsInfo?startPage=${s.index+1}">&raquo;</a></li>--%>
 
         </ul>
     </div>

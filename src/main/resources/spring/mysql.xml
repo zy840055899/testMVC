@@ -36,10 +36,21 @@
         <!--end-->
     </bean>
 
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+    <!--<property name="basePackage" value="com.test.dao"/>-->
+    <!--<property name="annotationClass" value="com.test.annotation.MyRepository"/>-->
+    <!--</bean>-->
+
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.test.dao"/>
-        <property name="annotationClass" value="com.test.annotation.MyRepository"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="myDataSource" />
+    </bean>
+
 
 </beans>
 

@@ -10,7 +10,7 @@ $(function () {
     $("#form1 .btn").on('click', function () {
         var params = {"username": $("#inputEmail3").val(), "password": $("#inputPassword3").val()};
         $.ajax({
-            url: "checkLogin.do",
+            url: "checkLogin",
             type: "post",
             data: params,
             dataType: "json",
@@ -19,7 +19,7 @@ $(function () {
                     $alertBody.html("用户名或密码错误");
                     $("#modal-95453").click();
                 }else{
-                    location.href="staffsInfo.do";					//登录成功，跳转至信息首页
+                    location.href="staffsInfo";					//登录成功，跳转至信息首页
                 }
             },
             error: function () {
@@ -45,7 +45,7 @@ $(function () {
         }
         var params = {"username": username, "password": password};
         $.ajax({
-            url: "register.do",
+            url: "register",
             type: "post",
             data: params,
             dataType: "json",

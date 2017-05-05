@@ -6,6 +6,7 @@ import com.test.dao.StaffDao;
 import com.test.entity.Admin;
 import com.test.entity.Staff;
 import com.test.entity.page.StaffPage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,12 +23,12 @@ import java.util.List;
 @RequestMapping("index")
 public class IndexController {
 
-    @Resource
+    @Autowired
     private StaffDao staffDao;
-    @Resource
+    @Autowired
     private AdminDao adminDao;
 
-    @RequestMapping("testSql.do")
+    @RequestMapping("testSql")
     @ResponseBody
     public List<Staff> testSql() {
         return staffDao.getAllStaffInfos();
@@ -38,12 +39,12 @@ public class IndexController {
      * @param model
      * @return
      */
-    @RequestMapping("login.do")
+    @RequestMapping("login")
     public String login(Model model) {
         return "index/login";
     }
 
-    @RequestMapping("checkLogin.do")
+    @RequestMapping("checkLogin")
     @ResponseBody
     public int checkLogin(String username, String password, HttpSession session) {
 
@@ -55,7 +56,7 @@ public class IndexController {
         return 0;     //0000:登录成功 1：用户名错误，2：错误，3：。。。
     }
 
-    @RequestMapping("register.do")
+    @RequestMapping("register")
     @ResponseBody
     public int register(String username, String password) {
         Admin admin = adminDao.getAdminByName(username);
@@ -76,7 +77,7 @@ public class IndexController {
      * @param model
      * @return
      */
-    @RequestMapping("staffsInfo.do")
+    @RequestMapping("staffsInfo")
     public String staffsInfo(Model model, StaffPage page) {
 
         page.setTotalRows(staffDao.getSumStaffs());
@@ -88,13 +89,13 @@ public class IndexController {
         return "staff/staffs";
     }
 
-    @RequestMapping("deleteStaff.do")
+    @RequestMapping("deleteStaff")
     public String deleteStaff(String startPage, String id) {
         staffDao.deleteStaffById(id);
-        return "redirect:staffsInfo.do?startPage="+startPage;
+        return "redirect:staffsInfo?startPage="+startPage;
     }
 
-    @RequestMapping("addStaff.do")
+    @RequestMapping("addStaff")
     @ResponseBody
     public int addStaff(Staff staff) {
 
@@ -104,7 +105,7 @@ public class IndexController {
         return 0;
     }
 
-    @RequestMapping("updateStaff.do")
+    @RequestMapping("updateStaff")
     @ResponseBody
     public int updateStaff(Staff staff, StaffPage page) {
         int result = 0;
