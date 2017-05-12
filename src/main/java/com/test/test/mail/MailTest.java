@@ -14,12 +14,12 @@ public class MailTest {
             Email email = new SimpleEmail();
             email.setHostName("smtp.163.com");
             email.setSmtpPort(465);
-            email.setAuthenticator(new DefaultAuthenticator("zy840055899@163.com", "pwd"));
+            email.setAuthenticator(new DefaultAuthenticator("zhengyingaaa@163.com", "pwd"));
             email.setSSLOnConnect(true);
-            email.setFrom("zy840055899@163.com");
+            email.setFrom("zhengyingaaa@163.com");
             email.setSubject("TestMail");
             email.setMsg("^_^");
-            email.addTo("zhengying@raiyee.com");
+            email.addTo("zhengyingaaa@163.com");
             email.send();
         } catch (Exception e) {
             e.printStackTrace();
