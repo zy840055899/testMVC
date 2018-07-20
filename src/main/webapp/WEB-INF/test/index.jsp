@@ -12,5 +12,9 @@
 </head>
 <body>
 <h3>spring mvc index page!</h3>
+
+${aaa }
+
+<br>123
 </body>
 </html>
